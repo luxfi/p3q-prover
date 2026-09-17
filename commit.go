@@ -4,11 +4,11 @@
 package p3qprover
 
 import (
+	"crypto/sha3"
 	"encoding/binary"
 
 	"github.com/luxfi/ids"
 	"github.com/luxfi/warp"
-	"golang.org/x/crypto/sha3"
 )
 
 // sha3sum returns SHA3-256(parts...) (FIPS 202). Used for every commitment and

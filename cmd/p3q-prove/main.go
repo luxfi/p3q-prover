@@ -73,7 +73,7 @@ func run(n, k int, threshold warp.WeightThreshold) error {
 	if _, err := rand.Read(a.setID[:]); err != nil {
 		return err
 	}
-	for i := 0; i < n; i++ {
+	for range n {
 		var id ids.NodeID
 		if _, err := rand.Read(id[:]); err != nil {
 			return err
@@ -92,7 +92,7 @@ func run(n, k int, threshold warp.WeightThreshold) error {
 		return err
 	}
 	entries := make([]p3q.CertEntry, 0, k)
-	for i := 0; i < k; i++ {
+	for i := range k {
 		sig, err := a.vals[i].sk.SignCtx(rand.Reader, subject, p3q.CrossCheckCtx())
 		if err != nil {
 			return err

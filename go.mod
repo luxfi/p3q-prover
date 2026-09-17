@@ -1,13 +1,12 @@
 module github.com/luxfi/p3q-prover
 
-go 1.26.4
+go 1.27.1
 
 require (
 	github.com/luxfi/crypto v1.20.2
 	github.com/luxfi/ids v1.3.2
 	github.com/luxfi/warp v1.24.1
 	github.com/stretchr/testify v1.11.1
-	golang.org/x/crypto v0.52.0
 )
 
 require (
@@ -44,6 +43,7 @@ require (
 	github.com/pmezard/go-difflib v1.0.1-0.20181226105442-5d4384ee4fb2 // indirect
 	github.com/supranational/blst v0.3.16 // indirect
 	go.uber.org/mock v0.6.0 // indirect
+	golang.org/x/crypto v0.52.0 // indirect
 	golang.org/x/exp v0.0.0-20260529124908-c761662dc8c9 // indirect
 	golang.org/x/mod v0.36.0 // indirect
 	golang.org/x/net v0.55.0 // indirect

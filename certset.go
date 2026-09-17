@@ -101,7 +101,7 @@ func readEntries(r *reader) ([]CertEntry, error) {
 		return nil, ErrMalformedProof
 	}
 	entries := make([]CertEntry, 0, n)
-	for i := uint32(0); i < n; i++ {
+	for range n {
 		idBytes, ok := r.take(nodeIDLen)
 		if !ok {
 			return nil, ErrMalformedProof

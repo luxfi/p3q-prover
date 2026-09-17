@@ -56,7 +56,7 @@ func newAuthority(t *testing.T, n int, weight uint64) *testAuthority {
 	require.NoError(t, err)
 
 	a := &testAuthority{setID: setID, vals: make([]validator, 0, n)}
-	for i := 0; i < n; i++ {
+	for range n {
 		var id ids.NodeID
 		_, err := rand.Read(id[:])
 		require.NoError(t, err)
@@ -86,7 +86,7 @@ func certFor(t *testing.T, v validator, subject []byte) p3q.CertEntry {
 func certsForSubset(t *testing.T, a *testAuthority, k int, subject []byte) []p3q.CertEntry {
 	t.Helper()
 	entries := make([]p3q.CertEntry, 0, k)
-	for i := 0; i < k; i++ {
+	for i := range k {
 		entries = append(entries, certFor(t, a.vals[i], subject))
 	}
 	return entries
